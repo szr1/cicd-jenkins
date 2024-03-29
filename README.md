@@ -31,10 +31,10 @@ pip install .
 # Docker Commands
 ```
 docker build -t loan_pred:v1 .
-docker build -t manifoldailearning/cicd:latest . 
-docker push manifoldailearning/cicd:latest
+docker build -t szogir/cicd:latest . 
+docker push szogir/cicd:latest
 
-docker run -d -it --name modelv1 -p 8005:8005 manifoldailearning/cicd:latest bash
+docker run -d -it --name modelv1 -p 8005:8005 szogir/cicd:latest bash
 
 docker exec modelv1 python prediction_model/training_pipeline.py
 
@@ -99,6 +99,7 @@ sudo usermod -a -G docker $USER
 # Admin password Jenkins
 
 `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
+`4b613f231d9f4590b8a8fad6550c0c74`
 
 # Payload URL format in github repo webhook
 
